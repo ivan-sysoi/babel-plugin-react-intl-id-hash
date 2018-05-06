@@ -1,14 +1,7 @@
 // @flow
 type File = {
-  opts: {
-    filename: string,
-  },
-  metadata: {
-    modules: {
-      imports: {
-        find: Function,
-      },
-    },
+  path: {
+    traverse: Function,
   },
 }
 

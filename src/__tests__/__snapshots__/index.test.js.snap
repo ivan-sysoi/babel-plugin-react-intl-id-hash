@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`basic 1`] = `
+exports[`default basic: basic 1`] = `
 "
 import { defineMessages } from 'react-intl'
 
@@ -15,11 +15,9 @@ export default defineMessages({
       ↓ ↓ ↓ ↓ ↓ ↓
 
 import { defineMessages } from 'react-intl';
-
 export default defineMessages({
   new: {
-    'id': 'kN4IPA==',
-
+    \\"id\\": \\"kN4IPA==\\",
     defaultMessage: 'id',
     description: 'describe text for translation'
   }
@@ -27,7 +25,55 @@ export default defineMessages({
 "
 `;
 
-exports[`basic 2`] = `
+exports[`default missingId: missingId 1`] = `
+"
+import { defineMessages } from 'react-intl'
+
+export default defineMessages({
+  new: {
+    defaultMessage: 'missing id',
+    description: 'should not fail when id is missing'
+  }
+})
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { defineMessages } from 'react-intl';
+export default defineMessages({
+  new: {
+    defaultMessage: 'missing id',
+    description: 'should not fail when id is missing'
+  }
+});
+"
+`;
+
+exports[`default stringId: stringId 1`] = `
+"
+import { defineMessages } from 'react-intl'
+
+export default defineMessages({
+  new: {
+    \\"id\\": \\"App.Components.Greeting.hello\\",
+    \\"defaultMessage\\": \\"id\\",
+    \\"description\\": \\"describe text for translation\\"
+  }
+})
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { defineMessages } from 'react-intl';
+export default defineMessages({
+  new: {
+    \\"id\\": \\"kN4IPA==\\",
+    \\"defaultMessage\\": \\"id\\",
+    \\"description\\": \\"describe text for translation\\"
+  }
+});
+"
+`;
+
+exports[`murmur3 hash basic: basic 1`] = `
 "
 import { defineMessages } from 'react-intl'
 
@@ -42,11 +88,9 @@ export default defineMessages({
       ↓ ↓ ↓ ↓ ↓ ↓
 
 import { defineMessages } from 'react-intl';
-
 export default defineMessages({
   new: {
-    'id': 'kN4IPA==',
-
+    \\"id\\": \\"kN4IPA==\\",
     defaultMessage: 'id',
     description: 'describe text for translation'
   }
@@ -54,7 +98,7 @@ export default defineMessages({
 "
 `;
 
-exports[`missingId 1`] = `
+exports[`murmur3 hash missingId: missingId 1`] = `
 "
 import { defineMessages } from 'react-intl'
 
@@ -68,7 +112,6 @@ export default defineMessages({
       ↓ ↓ ↓ ↓ ↓ ↓
 
 import { defineMessages } from 'react-intl';
-
 export default defineMessages({
   new: {
     defaultMessage: 'missing id',
@@ -78,31 +121,7 @@ export default defineMessages({
 "
 `;
 
-exports[`missingId 2`] = `
-"
-import { defineMessages } from 'react-intl'
-
-export default defineMessages({
-  new: {
-    defaultMessage: 'missing id',
-    description: 'should not fail when id is missing'
-  }
-})
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-import { defineMessages } from 'react-intl';
-
-export default defineMessages({
-  new: {
-    defaultMessage: 'missing id',
-    description: 'should not fail when id is missing'
-  }
-});
-"
-`;
-
-exports[`stringId 1`] = `
+exports[`murmur3 hash stringId: stringId 1`] = `
 "
 import { defineMessages } from 'react-intl'
 
@@ -117,38 +136,9 @@ export default defineMessages({
       ↓ ↓ ↓ ↓ ↓ ↓
 
 import { defineMessages } from 'react-intl';
-
 export default defineMessages({
   new: {
     \\"id\\": \\"kN4IPA==\\",
-
-    \\"defaultMessage\\": \\"id\\",
-    \\"description\\": \\"describe text for translation\\"
-  }
-});
-"
-`;
-
-exports[`stringId 2`] = `
-"
-import { defineMessages } from 'react-intl'
-
-export default defineMessages({
-  new: {
-    \\"id\\": \\"App.Components.Greeting.hello\\",
-    \\"defaultMessage\\": \\"id\\",
-    \\"description\\": \\"describe text for translation\\"
-  }
-})
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-import { defineMessages } from 'react-intl';
-
-export default defineMessages({
-  new: {
-    \\"id\\": \\"kN4IPA==\\",
-
     \\"defaultMessage\\": \\"id\\",
     \\"description\\": \\"describe text for translation\\"
   }

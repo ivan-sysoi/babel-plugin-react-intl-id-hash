@@ -15,52 +15,40 @@
     "validate": "npm run lint && npm run flow && npm run test"
   },
   "lint-staged": {
-    "src/**/*.js": [
-      "fmt",
-      "validate",
-      "git add"
-    ],
-    "*.json": [
-      "fmt",
-      "git add"
-    ]
+    "src/**/*.js": ["fmt", "validate", "git add"],
+    "*.json": ["fmt", "git add"]
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adam-26/babel-plugin-react-intl-id-hash.git"
   },
-  "keywords": [
-    "react-intl",
-    "id",
-    "hash"
-  ],
+  "keywords": ["react-intl", "id", "hash"],
   "author": "adam-26",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/adam-26/babel-plugin-react-intl-id-hash/issues"
   },
-  "homepage": "https://github.com/adam-26/babel-plugin-react-intl-id-hash#readme",
-  "files": [
-    "lib"
-  ],
+  "homepage":
+    "https://github.com/adam-26/babel-plugin-react-intl-id-hash#readme",
+  "files": ["lib"],
   "dependencies": {
-    "babel-types": "^6.26.0",
+    "babel-types": "^7.0.0-beta.3",
     "murmurhash-js": "^1.0.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.0.1",
-    "babel-jest": "^21.2.0",
-    "babel-plugin-tester": "^4.0.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-flow": "^6.23.0",
-    "babel-register": "^6.26.0",
-    "eslint": "^4.9.0",
+    "@babel/cli": "^7.0.0-beta.46",
+    "@babel/core": "^7.0.0-beta.46",
+    "babel-core": "7.0.0-bridge.0",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "@babel/preset-flow": "^7.0.0-beta.46",
+    "@babel/register": "^7.0.0-beta.46",
+    "babel-eslint": "^8.2.2",
+    "babel-plugin-tester": "^5.0.0",
+    "eslint": "^4.18.2",
     "eslint-config-precure": "^0.11.1",
-    "flow-bin": "^0.57.3",
+    "flow-bin": "^0.71.0",
     "husky": "^0.14.3",
-    "jest": "^21.2.1",
+    "jest-cli": "^22.4.3",
     "lint-staged": "^4.3.0",
     "prettier": "^1.7.4",
     "slash": "^1.0.0",

@@ -7,7 +7,34 @@ const PKG_NAME = 'react-intl'
 const FUNC_NAME = 'defineMessages'
 
 const isImportLocalName = (name: string, { file }: State) => {
-  const imports = file.metadata.modules.imports
+  const imports = []
+
+  file.path.traverse({
+    ImportDeclaration: {
+      exit(path) {
+        const { node } = path
+        const specifiers = []
+
+        imports.push({
+          source: node.source.value,
+          specifiers,
+        })
+
+        for (const specifier of path.get('specifiers')) {
+          const local = specifier.node.local.name
+
+          if (specifier.isImportSpecifier()) {
+            const importedName = specifier.node.imported.name
+            specifiers.push({
+              imported: importedName,
+              local,
+            })
+          }
+        }
+      },
+    },
+  })
+
   const intlImports = imports.find(x => x.source === PKG_NAME)
   if (intlImports) {
     const specifier = intlImports.specifiers.find(x => x.imported === FUNC_NAME)
